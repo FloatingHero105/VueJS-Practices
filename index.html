@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tareas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+    <div id="header">
+        <h1>
+            Lista de tareas
+        </h1>
+    </div>
+
+    <div id="content">
+
+        <div id="form">
+            <label for="task">Tarea</label>
+            <input type="text" id="task" v-model="preview">
+
+            <button id="addTask" v-on:click="addTask">
+                Añadir tarea
+            </button>
+
+            <ul>
+                <li v-for="task in tasks">
+                    <span v-text="task"></span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="addTask.js"></script>
+</body>
+</html>
